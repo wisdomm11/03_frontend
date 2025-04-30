@@ -5,14 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>table 태그</title>
+    <style>
+        /* css블락 */
+        table {
+            border-collapse: collapse;
+            /* 셀과 셀 사이를 없애는것 */
+        }
+    </style>
 </head>
 
 <body>
+    <!--  -->
     <h1>table 태그</h1>
     <hr>
     <br>
     <table border="1" align="center" width="700">
-        <tr align="center">
+        <tr align="center" bgcolor="#24dfe9">
             <td>이름</td>
             <td>주소</td>
             <td>나이</td>
@@ -37,6 +45,42 @@
             <td>010-1111-7777</td>
         </tr>
     </table>
+
+    <br><br>
+    <hr>
+    <br><br>
+
+    <table border="1" align="center" width="700">
+        <tr align="center">
+            <td rowspan="4" width="100">(사진)</td>
+            <td rowspan="2" width="100" bgcolor="#2ee8ef">성명</td>
+            <td width="100" bgcolor="#2ee8ef">한글</td>
+            <td width="150">&nbsp;</td>
+            <td width="100" bgcolor="#2ee8ef">생년월일</td>
+            <td> 년 월 일 </td>
+        </tr>
+        <tr align="center">
+            <td bgcolor="#2ee8ef">영문</td>
+            <td></td>
+            <td bgcolor="#2ee8ef">전화</td>
+            <td></td>
+        </tr>
+        <tr align="center">
+            <td bgcolor="#2ee8ef">이메일</td>
+            <td colspan="2"></td>
+            <td bgcolor="#2ee8ef">휴대폰</td>
+            <td></td>
+        </tr>
+
+        <tr align="center">
+            <td bgcolor="#2ee8ef">주소</td>
+            <td colspan="4">&nbsp;</td>
+        </tr>
+
+    </table>
+
+
+
 
 </body>
 
