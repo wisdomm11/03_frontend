@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Div 레이아웃 구성</title>
+    
+    <style>
+        .wrap {
+            margin: 0 auto;
+            width: 80%;
+        }
+        
+        div {
+            border: 1px solid red;
+        }
+
+        .header {
+            height: 100px;
+        }
+        .main {
+            height: 500px;
+        }
+        .footer {
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <!-- div로 레이아웃을 설정하는 방식은 옛날 방식 -->
+    <!-- HTML5에서 시멘트리 태그를 사용해서 레이아웃을 설정함 -->
+    
+    <div class="wrap">
+        <div class="header">헤더 블록</div>
+        <div class="main">메인 블록</div>
+        <div class="footer">푸터 블록</div>
+    </div>
+</body>
+</html>
