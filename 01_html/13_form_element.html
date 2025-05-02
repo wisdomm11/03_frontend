@@ -23,57 +23,61 @@
     <h2>회원가입 양식</h2>
     <p></p>
 
-    <form action="#" method="get">
+    <form action="submit.jsp" method="post">
 
         <table>
             <tr>
                 <td>
-                    아이디 :
+                    <label for="id">아이디 :</label>
+
                 </td>
                 <td>
                     <!-- 플레이스홀더는 설명해주는것 -->
-                    <input type="text" placeholder="아이디는 입력해주세요">
+                    <input type="text" placeholder="아이디는 입력해주세요" id="id" name="id">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="pass">패스워드 :</label>
+                </td>
+                <td>
+                    <input type="password" placeholder="비밀번호를 입력해주세요" id="pass" name="pass">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="password2">패스워드 확인 :</label>
 
                 </td>
-            </tr>
-            <tr>
                 <td>
-                    패스워드 :
-                </td>
-                <td>
-                    <input type="password" placeholder="비밀번호를 입력해주세요">
+                    <input type="password" placeholder="비밀번호를 확인해주세요" id="password2" name="password2">
                 </td>
             </tr>
             <tr>
                 <td>
-                    패스워드 확인 :
+                    <label for="email">이메일 :</label>
+
                 </td>
                 <td>
-                    <input type="password" placeholder="비밀번호를 확인해주세요">
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    이메일 :
-                </td>
-                <td>
-                    <input type="email" placeholder="이메일을 입력해주세요">
+                    <input type="email" placeholder="이메일을 입력해주세요" id="email" name="email">
                 </td>
             </tr>
             <tr>
                 <td>
-                    전화번호 :
+                    <label for="tel">전화번호 :</label>
+
                 </td>
                 <td>
-                    <input type="tel" placeholder="전화번호를 입력해주세요">
+                    <input type="tel" placeholder="전화번호를 입력해주세요" id="tel" name="tel">
                 </td>
             </tr>
             <tr>
                 <td>
-                    성별 :
+                    <label for="sex">성별 :</label>
+
                 </td>
                 <td>
-                    <select>
+                    <select id="sex" name="sex">
                         <option value="man">
                             남자
                         </option>
@@ -83,21 +87,55 @@
                     </select>
                 </td>
             </tr>
+
             <tr>
                 <td>
-                    생년월일 : 
+                    <label for="sex2">성별2 :</label>
                 </td>
                 <td>
-                    <input type="date">
+                    <input type="radio" id="sex2" name="sex2" value="man"> 남자
+                    <input type="radio" name="sex2" value="woman"> 여자
+                    <input type="radio" name="sex2" value="none"> 선택안함
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    취미 :
+                </td>
+                <td>
+                    <input type="checkbox" name="hobby1" value="sports"> 스포츠
+                    <input type="checkbox" name="hobby2" value="music"> 음악
+                    <input type="checkbox" name="hobby3" value="reading"> 독서
+                    <input type="checkbox" name="hobby4" value="travel"> 여행
+
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="date">생년월일 : </label>
+
+                </td>
+                <td>
+                    <input type="date" id="date" name="date">
                 </td>
             </tr>
             <tr>
                 <td>
-                    자기소개 : 
+                    <label for="profile">자기소개 : </label>
+
                 </td>
                 <td>
-                    <textarea rows="30" cols="40" placeholder="자기소개를 넣어주세요"></textarea>
+                    <textarea rows="30" cols="40" placeholder="자기소개를 넣어주세요" id="profile" name="profile"></textarea>
                 </td>
+            </tr>
+            <tr align="center">
+                <td colspan="2">
+                    <input type="reset" value="리셋">
+                    <input type="submit" value="전송">
+                </td>
+
             </tr>
         </table>
 
