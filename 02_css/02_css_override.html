@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 중복이 되는 경우 우선순위</title>
+
+    <style>
+        p {
+            color: blue !important;
+        }
+    </style>
+
+    <link rel="stylesheet" href="./css/02_css_override.css">
+
+</head>
+<body>
+    <!-- 
+        css 중복되는 경우 // 우선순위
+        0. !import // 
+        1. 인라인 스타일
+        2. 내부 스타일
+        3. 외부 스타일
+
+        css는 기본적으로 스타일이 부모에서부터 상속하고 누적되어 적용이 되는것
+        중복 항목이 있는 경우 // 아래 순서로 우선순위가 적용되는것
+    -->
+
+    <p style="color: red;">
+        CSS가 중복된 경우 어떤것이 적용될까?
+    </p>
+
+
+    
+</body>
+</html>
