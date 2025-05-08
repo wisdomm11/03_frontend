@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가상 선택자</title>
+
+    <style>
+        /* */
+        .wrap {
+            
+            margin: 0 auto;
+            width: 80%;
+        }
+
+        /* 방문안한것 */
+        /* 
+            링크, 비지티드, 호버, 액티브
+            순서를 맞춰야함
+        */
+        a:link {
+            color: aqua; text-decoration: none;
+        }
+        a:visited {
+            color: brown; text-decoration: none;
+        }
+
+        a:hover {
+            color:blueviolet; text-decoration: none;
+        }
+
+        a:active {
+            color: red; 
+        }
+
+        div.d1:hover {
+            color: red;
+            font-size: large;
+        }
+
+        div.d1:active {
+            font-size: xx-large;
+            color: blue;
+        }
+
+        
+    </style>
+
+</head>
+<body>
+    <!-- 
+    
+        가상 선택자 : 이벤트에 대한 선택
+        이벤트 // 마우스 올린것 // 마우스 클릭한것
+    
+    -->
+
+    <p>
+        <a href="http://www.w3.org" target="_blank">w3c 방문</a> : 잘 확인
+    
+    </p>
+
+    <div class="wrap">
+        <a href="http://www.w3.org" target="_blank">w3c 방문</a> : 잘 확인
+        <p>
+            <a href="http://www.google.com" target="_blank">구글</a>
+        </p>
+        <p>
+            <a href="https://www.naver.com" target="_blank">네이버</a>
+        </p>
+        <p>
+            <a href="https://www.daum.net" target="_blank">다음</a>
+        </p>
+
+        <div class="d1">
+            마우스 올렸을때
+        </div>
+
+    </div>
+
+    
+
+</body>
+</html>
