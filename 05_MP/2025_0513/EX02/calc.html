@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            /* 가로중앙 */
+            justify-content: center;
+
+            /* 세로중앙 */
+            /* align-items: center;  */
+
+            display: flex;
+
+
+            
+        }
+
+        table {
+            height: 30%;
+            width: 30%;
+        }
+
+        
+
+        td {
+            /* border: 1px solid black; */
+            justify-items: center;
+            justify-content: center;
+
+            /* 텍스트 수직정렬 */
+            align-content: center;
+
+            /* 텍스트 수평정렬 */
+            text-align: center;
+
+            padding: 3px;
+        }
+
+        .circle {
+            width: 50px;
+            height: 50px;
+            background-color: #A5A5A5;
+            border-radius: 50%;
+
+            /* 텍스트 수직정렬 */
+            align-content: center;
+
+            /* 텍스트 수평정렬 */
+            text-align: center;
+
+            font-weight: bold;
+
+            color: white;
+
+        }
+
+        .circle_header {
+            width: 50px;
+            height: 50px;
+            background-color: #A5A5A5;
+            border-radius: 50%;
+
+            /* 텍스트 수직정렬 */
+            align-content: center;
+
+            /* 텍스트 수평정렬 */
+            text-align: center;
+
+            color: black;
+
+            font-weight: bold;
+
+        }
+
+        .circle_orange {
+            width: 50px;
+            height: 50px;
+            background-color: #FE9F0A;
+            border-radius: 50%;
+
+            /* 텍스트 수직정렬 */
+            align-content: center;
+
+            /* 텍스트 수평정렬 */
+            text-align: center;
+
+            color: white;
+
+            font-weight: bold;
+        }
+
+        .big_circle {
+            width: 100px;
+            height: 50px;
+            background-color: #A5A5A5;
+            border-radius: 35px;
+
+            /* 텍스트 수직정렬 */
+            align-content: center;
+
+            /* 텍스트 수평정렬 */
+            text-align: left;
+            
+
+            color: white;
+
+            font-weight: bold;
+
+            padding-left: 25px;
+        }
+
+        .black {
+            background-color: black;
+            padding: 5px;
+        }
+
+        .td_margin {
+            margin: 5;
+        }
+
+        .test {
+            width: 90px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="black">
+        <table>
+            <tr>
+                <td>
+                    <div class="circle_header">AC</div>
+                </td>
+                <td>
+                    <div class="circle_header">+/-</div>
+                </td>
+                <td>
+                    <div class="circle_header">%</div>
+                </td>
+                <td>
+                    <div class="circle_orange">&divide;</div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="circle">7</div>
+                </td>
+                <td>
+                    <div class="circle">8</div>
+                </td>
+                <td>
+                    <div class="circle">9</div>
+                </td>
+                <td>
+                    <div class="circle_orange">&times;</div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="circle">4</div>
+                </td>
+                <td>
+                    <div class="circle">5</div>
+                </td>
+                <td>
+                    <div class="circle">6</div>
+                </td>
+                <td>
+                    <div class="circle_orange">-</div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="circle">1</div>
+                </td>
+                <td>
+                    <div class="circle">2</div>
+                </td>
+                <td>
+                    <div class="circle">3</div>
+                </td>
+                <td>
+                    <div class="circle_orange">+</div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <div class="big_circle test">0</div>
+                </td>
+                <td>
+                    <div class="circle">.</div>
+                </td>
+                <td>
+                    <div class="circle_orange">=</div>
+                </td>
+
+            </tr>
+
+        </table>
+    </div>
+
+
+
+</body>
+
+</html>
