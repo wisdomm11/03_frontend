@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RUBATO - 손해보험 컨설팅</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Malgun Gothic', '맑은 고딕', sans-serif;
+        }
+        
+        body {
+            color: #333;
+            line-height: 1.5;
+            font-size: 14px;
+        }
+        
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        ul {
+            list-style: none;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo-box {
+            border: 2px solid #00A99D;
+            padding: 10px 20px;
+            margin-right: 15px;
+        }
+        
+        .logo-text {
+            color: #00A99D;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        .logo-description {
+            color: #888;
+            font-size: 12px;
+        }
+        
+        .top-nav {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .top-nav a {
+            position: relative;
+            padding: 0 10px;
+        }
+        
+        .top-nav a:not(:last-child):after {
+            content: "|";
+            position: absolute;
+            right: -5px;
+            color: #ccc;
+        }
+        
+        .main-nav {
+            margin-top: 15px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .main-nav ul {
+            display: flex;
+        }
+        
+        .main-nav li {
+            flex: 1;
+            text-align: center;
+        }
+        
+        .main-nav a {
+            display: block;
+            padding: 15px 0;
+            font-weight: bold;
+            position: relative;
+        }
+        
+        .main-nav li:first-child a {
+            border-bottom: 3px solid #00A99D;
+            color: #00A99D;
+        }
+        
+        .banner {
+            background-color: #00A99D;
+            padding: 30px 0;
+            margin: 30px 0;
+        }
+        
+        .banner-content {
+            display: flex;
+            justify-content: space-around;
+        }
+        
+        .banner-item {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .banner-icon {
+            background-color: white;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+        }
+        
+        .banner-text {
+            color: white;
+            margin-bottom: 10px;
+        }
+        
+        .banner-button {
+            background-color: rgba(0, 0, 0, 0.2);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 5px;
+        }
+        
+        .content {
+            display: flex;
+            margin-bottom: 20px;
+        }
+        
+        .left-content {
+            flex: 1;
+            padding-right: 20px;
+        }
+        
+        .right-content {
+            flex: 1;
+            padding-left: 20px;
+        }
+        
+        .contact-box {
+            margin-bottom: 30px;
+        }
+        
+        .contact-number {
+            color: #00A99D;
+            font-size: 40px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        
+        .business-hours {
+            color: #666;
+        }
+        
+        .news-box {
+            border-bottom: 1px solid #eee;
+            padding-bottom: 20px;
+        }
+        
+        .news-item {
+            display: flex;
+            justify-content: space-between;
+            margin: 10px 0;
+        }
+        
+        .news-date {
+            color: #888;
+        }
+        
+        .faq-box {
+            border: 1px solid #eee;
+            padding: 15px;
+            display: flex;
+            border-radius: 5px;
+            margin-top: 20px;
+            background-color: #f9f9f9;
+        }
+        
+        .faq-icon {
+            margin-right: 20px;
+        }
+        
+        .footer-links {
+            display: flex;
+            margin-top: 30px;
+            padding: 20px 0;
+            border-top: 2px solid #00A99D;
+        }
+        
+        .footer-column {
+            flex: 1;
+            padding: 0 15px;
+        }
+        
+        .footer-title {
+            color: #00A99D;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        
+        .footer-list li {
+            margin-bottom: 8px;
+            position: relative;
+            padding-left: 10px;
+        }
+        
+        .footer-list li:before {
+            content: "•";
+            color: #00A99D;
+            position: absolute;
+            left: 0;
+        }
+        
+        /* 푸터 */
+        .site-footer {
+            background-color: #f9f9f9;
+            padding: 20px 0;
+            font-size: 12px;
+            color: #666;
+            margin-top: 30px;
+        }
+        
+        .footer-info {
+            margin-bottom: 10px;
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 5px;
+            margin-top: 10px;
+        }
+        
+        .social-icon {
+            width: 30px;
+            height: 30px;
+            background-color: #ccc;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+        
+        .facebook { background-color: #3b5998; }
+        .blog { background-color: #2DB400; }
+        .twitter { background-color: #00aced; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <div class="logo-box">
+                    <span class="logo-text">RUBATO</span>
+                </div>
+                <span class="logo-description">신뢰로 보답하는 루바토손해보험</span>
+            </div>
+            <div class="top-nav">
+                <a href="#">로그인</a>
+                <a href="#">회원 가입</a> 
+                <a href="#">사이트맵</a>
+                <a href="#">회사 소개</a>
+            </div>
+        </header>
+        
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#">손해보험 상식</a></li>
+                <li><a href="#">회사 소개</a></li>
+                <li><a href="#">보험상품 안내</a></li>
+                <li><a href="#">마이페이지</a></li>
+                <li><a href="#">고객센터</a></li>
+            </ul>
+        </nav>
+        
+        <div class="banner">
+            <div class="banner-content">
+                <div class="banner-item">
+                    <div class="banner-icon">
+                        <img src="/api/placeholder/60/60" alt="연금보험 아이콘">
+                    </div>
+                    <div class="banner-text">연금보험 알아보기</div>
+                    <a href="#" class="banner-button">자세히 보기 ▶</a>
+                </div>
+                
+                <div class="banner-item">
+                    <div class="banner-icon">
+                        <img src="/api/placeholder/60/60" alt="보험 아이콘">
+                    </div>
+                    <div class="banner-text">내게 필요한 보험?</div>
+                    <a href="#" class="banner-button">자세히 보기 ▶</a>
+                </div>
+                
+                <div class="banner-item">
+                    <div class="banner-icon">
+                        <img src="/api/placeholder/60/60" alt="장바구니 아이콘">
+                    </div>
+                    <div class="banner-text">보험료계산하기</div>
+                    <a href="#" class="banner-button">자세히 보기 ▶</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="content">
+            <div class="left-content">
+                <div class="contact-box">
+                    <h3>고객센터</h3>
+                    <div class="contact-number">1588-1234</div>
+                    <div class="business-hours">
+                        평 일: 오전 9시 ~ 오후 6시<br>
+                        토요일: 오전 10시 ~ 오후 1시
+                    </div>
+                </div>
+                <div>
+                    <a href="#">더보기 ▶</a>
+                </div>
+            </div>
+            
+            <div class="right-content">
+                <div class="news-box">
+                    <h3>공지사항</h3>
+                    <div class="news-item">
+                        <span class="news-title">새로운 상품의 출시를 알려드립니다.</span>
+                        <span class="news-date">2014-03-03</span>
+                    </div>
+                    <div class="news-item">
+                        <span class="news-title">새로운 상품의 출시를 알려드립니다.</span>
+                        <span class="news-date">2014-03-03</span>
+                    </div>
+                    <div class="news-item">
+                        <span class="news-title">새로운 상품의 출시를 알려드립니다.</span>
+                        <span class="news-date">2014-03-03</span>
+                    </div>
+                    <div class="news-item">
+                        <span class="news-title">새로운 상품의 출시를 알려드립니다.</span>
+                        <span class="news-date">2014-03-03</span>
+                    </div>
+                </div>
+                <div>
+                    <a href="#">더보기 ▶</a>
+                </div>
+                
+                <div class="faq-box">
+                    <div class="faq-icon">
+                        <img src="/api/placeholder/40/40" alt="FAQ 아이콘">
+                    </div>
+                    <div class="faq-content">
+                        <h4>손해보험 FAQ</h4>
+                        <p>궁금하신 것들을 자주찾는 섹션에 들러보세요!</p>
+                    </div>
+                </div>
+                
+                <div class="faq-banner">
+                    <a href="#">
+                        <img src="/api/placeholder/400/40" alt="5초 안에 보험료를 계산해 드려요">
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-links">
+            <div class="footer-column">
+                <h3 class="footer-title">손해보험 상식</h3>
+                <ul class="footer-list">
+                    <li><a href="#">손해보험이란?</a></li>
+                    <li><a href="#">나에게 필요한 보험은?</a></li>
+                    <li><a href="#">보험약관의 중요성</a></li>
+                    <li><a href="#">손해보험의 특징</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3 class="footer-title">루바토 보험의 장점</h3>
+                <ul class="footer-list">
+                    <li><a href="#">보험료 저렴</a></li>
+                    <li><a href="#">신속한 처리 및 보상</a></li>
+                    <li><a href="#">단기 시 월리금 보장</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3 class="footer-title">고객센터</h3>
+                <ul class="footer-list">
+                    <li><a href="#">전국 지점 안내</a></li>
+                    <li><a href="#">손해배상 안내</a></li>
+                    <li><a href="#">손해보험 FAQ</a></li>
+                    <li><a href="#">질문과 답변</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3 class="footer-title">마이페이지</h3>
+                <ul class="footer-list">
+                    <li><a href="#">계약 조회/변경</a></li>
+                    <li><a href="#">보험 계약 갱신</a></li>
+                    <li><a href="#">보험료 납입</a></li>
+                    <li><a href="#">증명서 발급</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3 class="footer-title">기업 안내</h3>
+                <ul class="footer-list">
+                    <li><a href="#">공인인증센터</a></li>
+                    <li><a href="#">인증서 발급/갱신</a></li>
+                    <li><a href="#">인증서 폐기</a></li>
+                    <li><a href="#">웹 로그인</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3 class="footer-title">회사 소개</h3>
+                <ul class="footer-list">
+                    <li><a href="#">기업소개</a></li>
+                    <li><a href="#">찾아오시는 길</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-info">
+                개인정보 취급방침 | 이용 안내 | 이메일 무단수집 거부
+            </div>
+            <div class="footer-info">
+                서민금융119서비스 | 보험범죄 신고 | 전자 민원 접수 | 보험약관 안내 | 금융사기신고센터
+            </div>
+            <div class="footer-info">
+                루바토 손해보험(주)<br>
+                대표이사: 홍길동<br>
+                주소: 서울시 강남구 가나다로 123번지<br>
+                전화: (02)123-1234, FAX: (02)134-4747<br>
+                Copyright by Rubato Company All Rights Reserved.
+            </div>
+            
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 20px;">
+                <div class="contact-number">고객센터 1588-1234</div>
+                <div style="display: flex; align-items: center;">
+                    <select style="padding: 5px; margin-right: 10px;">
+                        <option>언어선택</option>
+                    </select>
+                    <div class="social-icons">
+                        <div class="social-icon facebook">f</div>
+                        <div class="social-icon blog">b</div>
+                        <div class="social-icon twitter">t</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

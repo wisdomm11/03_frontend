@@ -9,39 +9,79 @@
     <!-- <link rel="stylesheet" href="css/common.css"> -->
 
     <style>
+        /* .header {
+
+            width: 800px;
+            margin: 0 auto;
+
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px;
+        } */
+
         .header {
             display: flex;
             justify-content: space-between;
-            /* 좌우 끝에 배치 */
             align-items: center;
-            /* 세로 중앙 정렬 (선택사항) */
-            padding: 16px;
-            /* 여백은 필요에 따라 조정 */
+            padding: 20px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .no-dot {
+            list-style-type: none;
+        }
+
+        table {
+            margin: auto;
+        }
+
+        .container {
+            width: 70%;
+            /* 원하는 폭으로 설정 */
+            margin: 0 auto;
+            /* 좌우 중앙 정렬 */
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 1000px;
+            margin: 0 auto;
+            padding: 16px 0;
         }
     </style>
 
 </head>
 
 <body>
-    <header>
-        <img src="/05_MP/2025_0513/EX04/img/logo.gif" alt="">
-        <img src="/05_MP/2025_0513/EX04/img/moto.gif" alt="">
-        <span>로그인 | 회원가입 | 사이트맵 | 회사 소개</span>
-        <!-- <tr>
-            <td>
-                <img src="/05_MP/2025_0513/EX04/img/logo.gif" alt="">
-                <img src="/05_MP/2025_0513/EX04/img/moto.gif" alt="">
-            </td>
-            <td></td>
-            <td>로그인 | 회원가입 | 사이트맵 | 회사 소개</td>
-        </tr> -->
-        <hr>
-    </header>
-    <main>
-        <table>
-            <tbody>
+
+    <div>
+        <header>
+            
+                <div>
+                    <img src="/05_MP/2025_0513/EX04/img/logo.gif" alt="">
+                </div>
+                <div>
+                    <img src="/05_MP/2025_0513/EX04/img/moto.gif" alt="">
+
+                </div>
+                <div>
+                    로그인 | 회원가입 | 사이트맵 | 회사 소개
+                </div>
+
+                <hr>
+
+            
+
+        </header>
+        <main>
+            <table class="container">
+
                 <tr>
-                    <td>
+                    <td colspan="3">
                         <img src="img/menu01.gif" alt="">
                         <img src="img/menu02.gif" alt="">
                         <img src="img/menu03.gif" alt="">
@@ -49,10 +89,10 @@
                         <img src="img/menu05.gif" alt="">
                     </td>
                 </tr>
-            </tbody>
-            <tbody>
+
+
                 <tr style="background-color: #00A8AB;">
-                    <td>
+                    <td colspan="3">
                         <img src="img/banner01.gif" alt="">
                         <img src="img/banner_bar.gif" alt="">
                         <img src="img/banner02.gif" alt="">
@@ -60,32 +100,50 @@
                         <img src="img/banner03.gif" alt="">
                     </td>
                 </tr>
-            </tbody>
-            <tbody>
+
                 <tr>
-                    <td><img src="img/title_customer.gif" alt=""></td>
-                    <td><img src="img/title_notice.gif" alt=""></td>
-                    <td rowspan="2"><img src="img/faq.gif" alt=""></td>
+                    <td>
+                        <img src="img/title_customer.gif" alt="">
+                        <img src="img/more.gif" alt=""> <br>
+                        <img src="img/customer_phone.gif" alt="">
+                    </td>
+                    <td>
+                        <img src="img/notice.gif" alt="">
+                        <img src="img/more.gif" alt="">
+                        <ul>
+                            <li class="no-dot">새로운 상품의 출시를 알려드립니다. <span style="float:right;">2014-03-03</span></li>
+                            <li class="no-dot">새로운 상품의 출시를 알려드립니다. <span style="float:right;">2014-03-03</span></li>
+                            <li class="no-dot">새로운 상품의 출시를 알려드립니다. <span style="float:right;">2014-03-03</span></li>
+                            <li class="no-dot">새로운 상품의 출시를 알려드립니다. <span style="float:right;">2014-03-03</span></li>
+                        </ul>
+
+                    </td>
+                    <td>
+                        <img src="img/faq.gif" alt=""> <br>
+                        <img src="img/cal.gif" alt="">
+
+                    </td>
+
+
+
                 </tr>
+
+
+
+
+
+
                 <tr>
-                    <td rowspan="2"><img src="img/customer_phone.gif" alt=""></td>
-                    <td rowspan="2">111</td>
-                    <td><img src="img/cal.gif" alt=""></td>
+
                 </tr>
+            </table>
 
-            </tbody>
+        </main>
+        <footer>
 
+        </footer>
+    </div>
 
-
-            <tr>
-
-            </tr>
-        </table>
-
-    </main>
-    <footer>
-
-    </footer>
 </body>
 
 </html>
