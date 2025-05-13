@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        
+        .wrap {
+            /* 중앙정렬 : width값이 정의되어야 중앙정렬이 되는것 */
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .d1 {
+            border: 1px solid red;
+            width: 100px;
+            float: left;
+            margin: 30px;
+            border-radius: 10px;
+            text-align: center;
+            background-color: greenyellow;
+            box-shadow: 5px 5px 20px black;
+        }
+
+        .d1:hover {
+            background-color: gray;
+            color: #4CAF50;
+            box-shadow: 10px 10px 10px aqua;
+        }
+
+        .rounded-rectangle {
+      width: 200px;
+      height: 100px;
+      background-color: #4CAF50;
+      border-radius: 15px; /* 둥근 정도 조절 */
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+    }
+
+    .galaxy-s24-plus {
+      width: 258px;      /* 90% 가로 */
+      height: 538px;     /* 90% 세로 */
+      border-radius: 36px;
+      border: 2px solid #333;
+      background: linear-gradient(to bottom, #ccc, #eee);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: sans-serif;
+      font-size: 18px;
+      color: #333;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+    </style>
+
+</head>
+
+
+<body>
+    
+    <div class="wrap">
+        <div class="d1">버튼1</div>
+        <div class="d1">버튼2</div>
+        <div class="d1">버튼3</div>
+        <div class="d1">버튼4</div>
+        <div class="d1">버튼5</div>
+        <div class="rounded-rectangle">버튼6</div>
+        <div class="galaxy-s24-plus">갤럭시24</div>
+    </div>
+
+</body>
+
+</html>
