@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #grad1,
+        #grad2,
+        #grad1-1,
+        #grad1-2 {
+            border: 1px solid red;
+            height: 200px;
+
+        }
+
+        /* 
+        선형 그라디언트 
+        */
+        #grad1 {
+            background: linear-gradient(to right, yellow, red);
+        }
+
+        #grad1-1 {
+            background: linear-gradient(to left, red, orange, yellow, green, blue, navy, blueviolet)
+        }
+
+        #grad1-2 {
+            background: linear-gradient(45deg, red, orange, yellow, green, blue, navy, blueviolet)
+        }
+
+
+
+        /* 원형 그라디언트 */
+        #grad2 {
+
+            border-radius: 50%;
+
+            width: 600px;
+            height: 600px;
+
+            background: radial-gradient(red, orange, yellow);
+
+        }
+
+        #grad_buttn {
+            border: 1px solid red;
+            width: 400px;
+            height: 100px;
+            text-align: center;
+            align-content: center;
+            background: linear-gradient(to right, yellow, yellowgreen);
+            box-shadow: 5px 5px 20px black;
+            color: red;
+            font-size: large;
+            font-weight: bolder;
+
+        }
+
+        #grad_buttn:hover {
+            box-shadow: 10px 5px 5px black;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>선형 그라디언트</h2>
+    <div id="grad1"></div>
+    <br>
+    <div id="grad1-1"></div>
+    <br>
+    <div id="grad1-2"></div>
+
+    <h2>원형 그라디언트</h2>
+    <div id="grad2"></div>
+
+    <h2>그라디언트 버튼</h2>
+    <div id="grad_buttn">버튼 클릭</div>
+</body>
+
+</html>

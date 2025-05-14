@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            height: 100px;
+            width: 100px;
+            background-color: yellow;
+
+            border: 1px solid red;
+
+            transition: width 3s, height 3s, transform 3s;
+        }
+
+        div:hover {
+            transform: rotate(270deg);
+            height: 200px;
+            width: 200px;
+            border: 5px solid black;
+        }
+
+        
+    </style>
+</head>
+
+<body>
+    <div>
+        마우스를 올리면 박스가 회전하면서 커집니다
+    </div>
+</body>
+
+</html>
