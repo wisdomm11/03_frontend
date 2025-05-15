@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 전역 설정 */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        /* 전체 레이아웃 컨테이너 */
+        .every {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* 헤더 영역 */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .header_left img {
+            max-height: 80px;
+        }
+
+        .header_right {
+            flex-grow: 1;
+            padding-left: 20px;
+        }
+
+        /* 로그인 / 메뉴 등 우상단 */
+        .header_right_4 {
+            text-align: right;
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+
+        .header_right_navigation {
+            background-color: green;
+            color: white;
+            border-radius: 5px;
+            height: 50px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            font-weight: bold;
+        }
+
+        /* 메인 레이아웃 */
+        .main {
+            display: flex;
+            margin-top: 20px;
+            gap: 20px;
+        }
+
+        /* 왼쪽 로그인 및 방명록 */
+        .main_left {
+            width: 25%;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .login,
+        .bang_myeong_lok {
+
+            background-color: #f3f3f3;
+            border: 1px solid gray;
+            border-radius: 5px;
+            padding: 10px;
+        }
+
+        .login input {
+            width: 100%;
+            margin-bottom: 5px;
+            padding: 5px;
+        }
+
+        .login img,
+        .bang_myeong_lok img {
+            display: block;
+            margin-top: 5px;
+        }
+
+        .bang_myeong_lok ul {
+            list-style: none;
+            margin-top: 10px;
+            padding-left: 10px;
+        }
+
+        .bang_1_name {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        /* 오른쪽 콘텐츠 영역 */
+        .main_right {
+            width: 75%;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        /* 공지사항, 자유게시판 */
+        .second {
+            display: flex;
+            gap: 20px;
+        }
+
+        .second_left {
+            width: 65%;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .second_right {
+            width: 35%;
+        }
+
+        .gongzi_name {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .gongzi_line {
+            border-bottom: 1px solid gray;
+            margin: 5px 0;
+        }
+
+        .gongzi_list {
+            display: flex;
+            gap: 10px;
+            font-size: 14px;
+        }
+
+        .gongzi_list ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .youtube img {
+            max-width: 100%;
+        }
+
+        /* 포토 갤러리 */
+        .three {
+            
+        }
+
+        .three_image {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 10px;
+        }
+
+        .innerimage {
+            width: calc(33.333% - 13.333px);
+            text-align: center;
+        }
+
+        .innerimage img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        /* 푸터 */
+        footer {
+            margin-top: 40px;
+            display: flex;
+            gap: 20px;
+            padding: 10px 0;
+            border-top: 1px solid #ccc;
+            font-size: 14px;
+        }
+
+        .foot1 img {
+            max-height: 40px;
+        }
+
+        .foot2 {
+            flex-grow: 1;
+        }
+
+        .foot3 img {
+            margin-right: 5px;
+        }
+
+        /* 유틸 */
+        .clear {
+            clear: both;
+        }
+
+        .login_id {
+            border: 1px solid black;
+            width: 150px;
+            height: 30px;
+            margin: 5px;
+        }
+
+        .login_password {
+            border: 1px solid black;
+            width: 150px;
+            height: 30px;
+            margin: 5px;
+        }
+
+        .login_float1 {
+            display: flex;
+        }
+
+        .login1,
+        .login22,
+        login3 {
+            display: flex;
+        }
+
+        .login3 {
+            display: flex;
+            gap: 5px;
+            /* 이미지 사이 여백을 주고 싶다면 */
+        }
+
+        footer {
+            display: flex;
+            justify-content: space-around;
+
+        }
+
+        .three {
+            border: 1px solid gray;
+            padding: 10px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="every">
+        <header>
+
+            <div class="header">
+                <div class="header_left header_two">
+                    <img src="./img/logo.png" alt="">
+                </div>
+
+                <div class="header_right header_two">
+                    <div class="header_right_4">
+                        HOME | LOGIN | JOIN | NOTICE
+                    </div>
+                    <div class="header_right_navigation">
+                        <div>자유게시판</div>
+                        <div>|</div>
+                        <div>기타 연주</div>
+                        <div>|</div>
+                        <div>공동구매</div>
+                        <div>|</div>
+                        <div>연주회안내</div>
+                        <div>|</div>
+                        <div>회원게시판</div>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+        </header>
+        <div class="clear"></div>
+        <main>
+
+            <div class="main">
+                <div class="main_left main_two">
+
+                    <div class="login">
+                        <div class="login1">
+                            Member LOGIN
+                        </div>
+                        <div class="login22">
+                            <div class="login2">
+                                <div class="login_id">
+                                    &nbsp;
+                                </div>
+                                <div class="login_password">
+                                    &nbsp;
+                                </div>
+                            </div>
+                            <img src="./img/btn_login.gif" alt="">
+
+                        </div>
+                        <div class="login3">
+
+                            <img src="./img/btn_join.gif" alt="">
+                            <img src="./img/btn_search.gif" alt="">
+
+
+                        </div>
+
+
+
+
+
+
+                        <div class="clear"></div>
+                    </div>
+
+                    <div class="bang_myeong_lok">
+                        <div class="bang_1">
+                            <div class="bang_1_name">
+                                방명록
+                            </div>
+                            <div class="bang_1_line"></div>
+                        </div>
+                        <div class="bang_2">
+                            <ul>
+                                <li>안녕하세요!</li>
+                                <li>안녕하세요!</li>
+                                <li>안녕하세요!</li>
+                                <li>안녕하세요!</li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="main_right main_two">
+
+
+
+                    <div class="first">
+                        <img src="./img/main_img.png" alt="">
+                    </div>
+                    <div class="second">
+                        <div class="second_left floatleft">
+
+                            <div class="second_left_top">
+                                <div class="gongzi_name">
+                                    <img src="./img/icon_green.gif" alt="">
+                                    <span>공지사항</span>
+                                    <img src="./img/more.gif" alt="">
+                                </div>
+                                <div class="gongzi_line">
+                                </div>
+                                <div class="gongzi_list">
+                                    <img class="gongzi_floatleft" src="./img/book_pen.gif" alt="">
+                                    <ul class="gongzi_floatleft">
+                                        <li>루바토 개편과 사이트 이용</li>
+                                        <li>루바토 개편과 사이트 이용</li>
+                                        <li>루바토 개편과 사이트 이용</li>
+                                        <li>루바토 개편과 사이트 이용</li>
+                                    </ul>
+                                    <ul class="gongzi_floatleft">
+                                        <li>2017-09-20</li>
+                                        <li>2017-09-20</li>
+                                        <li>2017-09-20</li>
+                                        <li>2017-09-20</li>
+                                    </ul>
+                                </div>
+
+                            </div>
+
+                            <div class="clear"></div>
+
+                            <div class="second_left_down">
+                                <div class="gongzi_name">
+                                    <img src="./img/icon_green.gif" alt="">
+                                    <span>자유 게시판</span>
+                                    <img src="./img/more.gif" alt="">
+                                </div>
+                                <div class="gongzi_line">
+                                </div>
+                                <div class="gongzi_list">
+                                    <img class="gongzi_floatleft" src="./img/book_pen.gif" alt="">
+                                    <ul class="gongzi_floatleft">
+                                        <li>까스롱의 선물인 보드카</li>
+                                        <li>까스롱의 선물인 보드카</li>
+                                        <li>까스롱의 선물인 보드카</li>
+                                        <li>까스롱의 선물인 보드카</li>
+                                    </ul>
+                                    <ul class="gongzi_floatleft">
+                                        <li>2017-09-20</li>
+                                        <li>2017-09-20</li>
+                                        <li>2017-09-20</li>
+                                        <li>2017-09-20</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="second_right floatleft">
+                            <div class="youtube">
+                                <img src="./img/icon_green.gif" alt="">
+                                <span>YOUTUBE 동영상</span>
+                                <img src="./img/more.gif" alt="">
+                            </div>
+                            <div class="gongzi_line">
+                            </div>
+                            <div class="gongzi_list">
+                                <img src="./img/bach.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="clear"></div>
+
+                    <div class="three_name">
+                        <img src="./img/icon_green.gif" alt="">
+                        <span>포토 갤러리</span>
+                    </div>
+                    <div class="three">
+
+                        <div class="three_image">
+                            <div class="three_image_first  innerimage">
+                                <div>
+                                    <img src="./img/img1.jpg" alt="">
+                                </div>
+                                <div>
+                                    기타 페스티벌 4중주
+                                </div>
+                            </div>
+                            <div class="three_image_second  innerimage">
+                                <div>
+                                    <img src="./img/img1.jpg" alt="">
+                                </div>
+                                <div>
+                                    기타 페스티벌 4중주
+                                </div>
+                            </div>
+                            <div class="three_image_third innerimage">
+                                <div>
+                                    <img src="./img/img1.jpg" alt="">
+                                </div>
+                                <div>
+                                    기타 페스티벌 4중주
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+                <div class="clear"></div>
+
+
+            </div>
+
+
+
+
+        </main>
+
+
+        <footer>
+
+            <div>
+                <img src="./img/footer_logo.gif" alt="">
+            </div>
+            <div>
+                <div>서울시 강남구 삼성동 1234 우 : 123-1234</div>
+                <div>TEL : 031-123-1234 Email: email@domain.com</div>
+                <div>COPYRIGHT (C) 루바토 ALL RIGHTS REVERVED</div>
+            </div>
+            <div>
+                <img src="./img/facebook.gif" alt="">
+                <img src="./img/blog.gif" alt="">
+                <img src="./img/twitter.gif" alt="">
+            </div>
+
+
+        </footer>
+    </div>
+
+
+
+</body>
+
+</html>
