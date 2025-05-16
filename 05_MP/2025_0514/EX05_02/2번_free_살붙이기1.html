@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        .allthing {
+            width: 70%;
+            margin: 0 auto;
+        }
+
+        .header {
+            display: flex;
+
+        }
+
+        .h_r_top {
+            text-align: right;
+
+            margin-bottom: 5px;
+        }
+
+        /* .header_left {
+            margin: 20px;
+            margin-top: 10px;
+        } */
+
+        .header_left {
+            flex: 1;
+
+        }
+
+        /* .header_right {
+            width: 100%;
+            margin: 20px;
+            margin-top: 10px
+        } */
+
+        .header_right {
+            flex: 4;
+        }
+
+        .h_r_down {
+            border: 1px solid green;
+            padding: 5px;
+            display: flex;
+            background-color: forestgreen;
+            border-radius: 15px;
+
+        }
+
+        .h_r_down a {
+            font-weight: bold;
+            text-decoration: none;
+            text-align: center;
+            flex: 1;
+
+            color: white;
+        }
+
+        .main {
+            display: flex;
+            gap: 20px;
+        }
+
+        .main_left {
+            flex: 1;
+
+
+        }
+
+        .main_right {
+            flex: 4;
+
+
+        }
+
+        .m_l_top {
+            border: 1px solid gray;
+            border-radius: 5px;
+            background-color: #F3F3F3;
+
+            margin-bottom: 10px;
+            padding: 5px;
+        }
+
+        .login_2 {
+            display: flex;
+
+        }
+
+        button {
+            height: calc(100%);
+            margin-left: 5px;
+        }
+
+        .login_2_whitebox input {
+            margin-left: 5px;
+        }
+
+        .login_1 {
+            padding-left: 5px;
+        }
+
+        .login_3 a {
+            margin-left: 5px;
+        }
+
+        .m_l_down {
+            border: 1px solid gray;
+            border-radius: 5px;
+            background-color: #F3F3F3;
+
+            padding: 5px;
+        }
+
+        .mld_1 {
+            margin-left: 5px;
+        }
+
+
+
+        .goigzi_inner2 {
+            display: flex;
+            justify-content: space-evenly;
+
+        }
+
+        .m_r_1 img {
+            width: 100%;
+            height: auto;
+            display: block;
+            /* 여백 제거 */
+
+            margin-bottom: 5px;
+        }
+
+        .free_inner2 {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .m_r_2_right {
+            margin-left: 20px;
+        }
+
+        .youtube_inner2 {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .youtube_inner2 img {
+            width: 70%;
+            height: auto;
+            display: block;
+            /* 여백 제거 */
+
+
+        }
+
+        .m_r_3_image {
+            border: 1px solid gray;
+
+            display: flex;
+            justify-content: space-evenly;
+
+            border-radius: 10px;
+
+            padding: 15px;
+        }
+
+        .image11 {
+            text-align: center;
+        }
+
+        footer {
+            display: flex;
+        }
+
+        .footer1 {
+            flex: 1;
+        }
+
+        .footer2 {
+            flex: 4;
+
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .h_r_down div {
+            color: white;
+        }
+
+        div .login_1_1 {
+            color: #A1D85A;
+            font-weight: bold;
+        }
+
+
+
+        .m_l_2 {
+            position: relative;
+
+            margin-bottom: 10px;
+        }
+
+        .m_l_2 img {
+            width: 100%;
+            /* 부모 div에 맞춰서 확대 */
+            height: auto;
+            /* 비율 유지 */
+
+            display: block;
+        }
+
+        .image-text {
+            position: absolute;
+            top: 100px;
+            /* 조절 가능 */
+            left: 10px;
+            /* 조절 가능 */
+            color: black;
+            /* 또는 적절한 색상 */
+            font-weight: bold;
+        }
+
+        .m_l_3 {
+
+            border: 1px solid gray;
+            border-radius: 5px;
+            background-color: white;
+
+            margin-bottom: 10px;
+            padding: 5px;
+
+            display: flex;
+            flex-direction: column;
+
+            align-items: center;
+        }
+
+        .ml3_image {
+            padding: 3px;
+        }
+
+        .custom-hr {
+            width: 100%;
+            height: 1px;
+            background-color: gray;
+            border: none;
+            margin: 10px 0;
+        }
+
+        .m_r_2_search {
+            display: flex;
+            justify-content: space-between;
+
+            margin-bottom: 10px;
+        }
+
+        .m_r_2_table {
+            width: 100%;
+            text-align: center;
+
+            border-collapse: collapse;
+        }
+
+        .m_r_2_table thead {
+            background-color: #EEEEEE;
+        }
+
+        .m_r_2_table td {
+            border-bottom: 1px solid #ccc;
+        }
+
+        .table_button {
+            display: flex;
+            margin-top: 5px;
+        }
+
+        .table_button>div:first-child {
+            flex: 3;
+            text-align: center;
+        }
+
+        .table_button>div:last-child {
+            flex: 1;
+            text-align: right;
+        }
+
+        .search_button {
+            background-color: black;
+            color: white;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div class="allthing">
+        <header class="header">
+            <div class="header_left">
+                <a href="./1번_index2_2살붙이기5.html">
+                    <img src="./img/logo.png" alt="">
+                </a>
+
+
+            </div>
+            <div class="header_right">
+                <div class="h_r_top">
+                    HOME | LOGIN | JOIN | NOTICE
+                </div>
+                <div class="h_r_down">
+                    <a href="./2번_free_살붙이기1.html">자유게시판</a>
+                    <div>|</div>
+                    <a href="">기타연주</a>
+                    <div>|</div>
+                    <a href="">공동구매</a>
+                    <div>|</div>
+                    <a href="">연주회안내</a>
+                    <div>|</div>
+                    <a href="">회원게시판</a>
+                </div>
+            </div>
+        </header>
+
+
+        <main class="main">
+            <div class="main_left">
+                <div class="m_l_top">
+                    <div class="login_1">
+                        <span class="login_1_1">Member</span>
+                        <span>LOGIN</span>
+                    </div>
+                    <div class="login_2">
+                        <div class="login_2_whitebox">
+                            <input type="text">
+                            <br>
+                            <input type="text">
+                        </div>
+                        <div class="login_2_button">
+                            <button>로그인</button>
+                        </div>
+
+
+                    </div>
+                    <div class="login_3">
+                        <a href="">회원가입</a>
+                        <span>|</span>
+                        <a href="">아이디/비밀번호 찾기</a>
+                    </div>
+                </div>
+
+                <div class="m_l_2">
+                    <img src="./img/sub_menu_bg.png" alt="">
+                    <div class="image-text">
+                        <ul>
+                            <li>자유게시판</li>
+                            <li>방명록</li>
+                            <li>공지사항</li>
+                            <li>등업 요청</li>
+                            <li>포토갤러리</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="m_l_3">
+                    <div class="ml3_image">
+                        <img src="./img/banner1.png" alt="">
+                    </div>
+                    <div class="ml3_image">
+                        <img src="./img/banner2.png" alt="">
+                    </div>
+                    <div class="ml3_image">
+                        <img src="./img/banner3.png" alt="">
+                    </div>
+                </div>
+
+
+
+
+
+            </div>
+
+
+
+
+
+            <div class="main_right">
+
+                <div class="m_r_1">
+                    <img src="./img/comm.gif" alt="">
+                </div>
+                <div class="m_r_2">
+                    <p>
+                    <h3>자유게시판</h3>
+                    </p>
+                    <hr class="custom-hr">
+                    <div class="m_r_2_search">
+                        <div>
+                            <span style="color: gray;">&#9655;</span>
+                            <span>총 5개의 게시물이 있습니다.</span>
+                        </div>
+                        <div>
+                            <img src="./img/select_search.gif" alt="">
+                            <select name="" id="">
+                                <option value="">제목</option>
+                                <option value="">작성자</option>
+                            </select>
+                            <input type="text">
+                            <button class="search_button">검색</button>
+
+                        </div>
+                    </div>
+                    <table class="m_r_2_table">
+                        <thead>
+                            <tr>
+                                <th>번호</th>
+                                <th>제목</th>
+                                <th>글쓴이</th>
+                                <th>일시</th>
+                                <th>조회수</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- 여기에 실제 데이터 행들이 들어갑니다 -->
+                            <tr>
+                                <td>1</td>
+                                <td>
+                                    <a href="33번_free_살붙이기2.html">까스롱님의 선물인 보드카가 정말 독하네요!!!</a>
+
+                                </td>
+                                <td>루바토</td>
+                                <td>2017-09-20</td>
+                                <td>15</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>까스롱님의 선물인 보드카가 정말 독하네요!!!</td>
+                                <td>루바토</td>
+                                <td>2017-09-20</td>
+                                <td>15</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>까스롱님의 선물인 보드카가 정말 독하네요!!!</td>
+                                <td>루바토</td>
+                                <td>2017-09-20</td>
+                                <td>15</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="table_button">
+                        <div>
+                            <span>&#9664;</span>
+                            <span>이전</span>
+                            <span>1</span>
+                            <span>다음</span>
+                            <span>&#9654;</span>
+                        </div>
+                        <div>
+                            <a href="./2번_free_살붙이기1.html">
+                                <img src="./img/list.png" alt="">
+                            </a>
+
+                            <a href="./44번_free_살붙이기2.html">
+                                <img src="./img/write.png" alt="">
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </main>
+
+        <hr>
+
+
+        <footer>
+            <div class="footer1">
+
+            </div>
+            <div class="footer2">
+                <div class="f_1">
+                    <img src="./img/logo_footer.gif" alt="">
+                </div>
+                <div class="f_2">
+                    <div>서울시 강남구 삼성동 1234 우 : 123-1234</div>
+                    <div>TEL : 031-123-1234 EMAIL : email@domain.com</div>
+                    <div>cOPYRIGHT (C) 루바토 ALL RIGHTS RESERVED</div>
+                </div>
+                <div class="f_3">
+                    <img src="./img/facebook.gif" alt="">
+                    <img src="./img/blog.gif" alt="">
+                    <img src="./img/twitter.gif" alt="">
+                </div>
+
+            </div>
+
+
+        </footer>
+
+    </div>
+</body>
+
+</html>
