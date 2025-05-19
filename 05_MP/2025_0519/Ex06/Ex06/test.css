@@ -1,0 +1,105 @@
+body {
+    background-color: #EFF1F7;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+}
+
+#allthing {
+    width: 80%;
+    display: flex;
+
+
+
+}
+
+#main1,
+#main2,
+#main3 {
+    margin: 10px;
+    background-color: white;
+    display: flex;
+    border-radius: 15px;
+
+}
+
+#main1 {
+    flex: 1fr;
+}
+
+#main2 {
+    flex: 1fr;
+}
+
+#main3 {
+    flex: 1fr;
+}
+
+#main2,
+#main3 {
+    border: 1px solid #0C99FF;
+
+}
+
+/*
+img {
+    max-width: 50%;
+    height: auto;
+}
+*/
+
+img {
+    display: block;
+    margin: 0 auto;
+    max-width: 50%;
+    height: auto;
+}
+
+#main1_1,
+#main2_1,
+#main3_1 {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    margin: 15px;
+}
+
+
+#main1_2,
+#main2_2,
+#main3_2 {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: flex-start;
+
+    margin: 15px;
+}
+
+#main1_2_1,
+#main2_2_1,
+#main3_2_1 {
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+@media screen and (max-width: 600px) {
+
+    #allthing {
+        flex-direction: column;
+        /* ← 가로 배치 → 세로 배치로 변경 */
+    }
+
+    #main1,
+    #main2,
+    #main3 {
+        width: 100%;
+    }
+}
