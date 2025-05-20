@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 100vw;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .item {
+            
+            border: 1px solid red;
+            font-size: 1.2rem;
+            font-weight: bold;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .color1 {
+            background-color: aliceblue;
+        }
+        .color2 {
+            background-color: aqua;
+        }
+        .color3 {
+            background-color: chartreuse;
+        }
+        .color4 {
+            background-color: coral;
+        }
+        .color5 {
+            background-color: crimson;
+        }
+        .color6 {
+            background-color: cyan;
+        }
+        .color7 {
+            background-color: darkslateblue;
+        }
+        .color8 {
+            background-color: forestgreen;
+        }
+        .color9 {
+            background-color: peru;
+        }
+        .color10 {
+            background-color: rosybrown;
+        }
+        .color11 {
+            background-color: seagreen;
+        }
+        .color12 {
+            background-color: skyblue;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(5, 20%);
+            
+            grid-auto-rows: 100px;
+
+            /* grid-gap: 1rem; */
+            grid-column-gap: ;
+            grid-row-gap: 2rem;
+
+            padding: 1rem;
+
+            
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item color1">Item1</div>
+        <div class="item color2">Item2</div>
+        <div class="item color3">Item3</div>
+        <div class="item color4">Item4</div>
+        <div class="item color5">Item5</div>
+        <div class="item color6">Item6</div>
+        <div class="item color7">Item7</div>
+        <div class="item color8">Item8</div>
+        <div class="item color9">Item9</div>
+        <div class="item color10">Item10</div>
+        <div class="item color11">Item11</div>
+        <div class="item color12">Item12</div>
+    </div>
+
+</body>
+
+</html>
