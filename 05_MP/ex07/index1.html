@@ -42,7 +42,7 @@
             align-items: center;
             justify-content: flex-start;
 
-            height: 10vh;
+
 
         }
 
@@ -58,8 +58,6 @@
         #main {
             background-color: #E6E6E6;
 
-            height: 30vw;
-
 
         }
 
@@ -71,7 +69,7 @@
 
             background-color: #E6E6E6;
 
-            height: 5vh;
+            height: 40vh;
         }
 
         #main_2 {
@@ -81,10 +79,12 @@
             height: 50vh;
 
             display: flex;
-            align-items: center;
+
             /* 세로 가운데 정렬 */
             justify-content: center;
             /* 가로 가운데 정렬 */
+
+
         }
 
         #main_2_table {
@@ -94,7 +94,7 @@
             margin: auto;
             width: 70%;
 
-            margin-top: 0px;
+            margin-top: 0px !important;
         }
 
         #main_2_table td {
@@ -124,6 +124,39 @@
 
             height: 10vh;
         }
+
+        #header_1_a {
+            color: white;
+            text-decoration: none;
+        }
+
+        @media screen and (max-width: 600px) {
+            #header_2 {
+                flex-direction: column;
+
+                align-items: center;
+                justify-content: center;
+
+            }
+
+            #header_2 div {
+                margin: 10px 0;
+                /* 여백 조정 */
+                margin-left: 0;
+                /* 기존 왼쪽 여백 제거 */
+            }
+
+        }
+
+        #main_form {
+            width: 100%;
+        }
+
+        input[type="text"] {
+            
+            border-radius: 3px;
+            /* 둥근 모서리 */
+        }
     </style>
 
 </head>
@@ -131,7 +164,10 @@
 <body>
     <div id="wrap">
         <header>
-            <div id="header_1">쇼핑몰 회원관리 VER 1.0</div>
+            <div id="header_1">
+                <a id="header_1_a" href="./index1.html">쇼핑몰 회원관리 VER 1.0</a>
+
+            </div>
 
             <nav id="header_2">
                 <div id="header2_1"><a href="./index2.html">회원등록</a></div>
@@ -146,7 +182,10 @@
                 <div id="header2_4"><a href="">홈으로</a></div>
             </div> -->
         </header>
-        <main id="main">
+        <main>
+            <div id="main_1">쇼핑몰 회원 등록</div>
+
+            
             
         </main>
         <footer>
