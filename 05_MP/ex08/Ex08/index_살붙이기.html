@@ -10,6 +10,12 @@
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 
     <style>
+        #wrap {
+            width: 100%;
+
+            /* margin: 0 auto; */
+        }
+
         #header_top {
             display: flex;
 
@@ -24,6 +30,10 @@
         #ht_2 nav {
             background-color: #F2F0F0 !important;
             /* Bootstrap의 기본색을 덮어씌우려면 !important 사용 */
+        }
+
+        .ht_2_input {
+            width: 300px;
         }
 
         #ht_3 {
@@ -50,6 +60,8 @@
         #ht_3_ul a {
             text-decoration: none;
         }
+
+        
 
         
 
@@ -88,7 +100,7 @@
 </head>
 
 <body>
-    <div>
+    <div id="wrap">
 
         <header>
             <div id="header_top">
@@ -99,7 +111,7 @@
                     <nav class="navbar bg-light">
                         <div class="container-fluid">
                             <form class="d-flex" role="search">
-                                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                                <input class="form-control me-2 ht_2_input" type="search" placeholder="Search" aria-label="Search">
                                 <button class="btn btn-outline-success" type="submit">Search</button>
                             </form>
                         </div>
