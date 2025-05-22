@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Dayun Art</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            background-color: #fff;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #7A9A01;
+        }
+
+        .search input {
+            padding: 5px;
+        }
+
+        .top-menu a {
+            margin-left: 10px;
+            color: #555;
+            text-decoration: none;
+        }
+
+        .main-menu {
+            background-color: #444;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .main-menu a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+
+        .container {
+            display: flex;
+            padding: 20px;
+        }
+
+        .sidebar {
+            width: 200px;
+            background-color: #eee;
+            padding: 15px;
+        }
+
+        .sidebar h3 {
+            background-color: #8DB600;
+            color: white;
+            padding: 10px;
+            margin: 0 0 10px 0;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar li {
+            padding: 5px 0;
+        }
+
+        .main-content {
+            flex: 2;
+            margin: 0 20px;
+        }
+
+        .main-image {
+            width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        .special-shop .shop-items {
+            display: flex;
+            gap: 20px;
+            margin-top: 10px;
+        }
+
+        .category-items>div {
+            margin-top: 20px;
+            padding: 10px;
+            background: #fff;
+            border: 1px solid #ccc;
+        }
+
+        .side-info {
+            width: 250px;
+        }
+
+        .notice,
+        .event {
+            background-color: #fff;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+        }
+
+        .notice h4,
+        .event h4 {
+            color: #8DB600;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">DAYUN ART</div>
+        <div class="search">
+            <input type="text" placeholder="SEARCH">
+        </div>
+        <div class="top-menu">
+            <a href="#">로그인</a> |
+            <a href="#">회원가입</a> |
+            <a href="#">마이페이지</a> |
+            <a href="#">이용안내</a> |
+            <a href="#">고객센터</a>
+        </div>
+    </header>
+
+    <nav class="main-menu">
+        <a href="#">상세 페이지</a>
+        <a href="#">장바구니</a>
+        <a href="#">고객 갤러리</a>
+        <a href="#">주문배송</a>
+        <a href="#">자주 하는 질문</a>
+    </nav>
+
+    <div class="container">
+        <aside class="sidebar">
+            <h3>CATEGORY ITEM</h3>
+            <ul>
+                <li>생활 아트</li>
+                <li>캔버스 아트</li>
+                <li>사진 벽지</li>
+                <li>창문형/현관문형</li>
+                <li>포인트 벽지</li>
+                <li>세계지도</li>
+                <li>앤틱 세계지도 벽지</li>
+                <li>입체 세계지도 벽지</li>
+                <li>어린이방 세계지도</li>
+                <li>즉착형 똥스크린</li>
+                <li>맞춤제작 결제창</li>
+            </ul>
+        </aside>
+
+        <main class="main-content">
+            <img src="96dbe6be-2511-4b7e-addd-0fe5a62cbb7b.png" alt="메인 이미지" class="main-image">
+
+            <section class="special-shop">
+                <h3>SPECIAL SHOP</h3>
+                <div class="shop-items">
+                    <img src="https://via.placeholder.com/200x200?text=Tree+Art" alt="트리 아트">
+                    <img src="https://via.placeholder.com/200x200?text=Green+Rose" alt="그린 로즈">
+                </div>
+            </section>
+
+            <section class="category-items">
+                <div>
+                    <h4>LANDSCAPE</h4>
+                    <p>한 폭의 아름다움 풍경 사진 벽지</p>
+                </div>
+                <div>
+                    <h4>POINT WALLPAPER</h4>
+                    <p>멋있는 꽃의 포인트를 포인트 벽지</p>
+                </div>
+                <div>
+                    <h4>CHILDREN</h4>
+                    <p>동심 속으로! 어린이방 벽지</p>
+                </div>
+            </section>
+        </main>
+
+        <aside class="side-info">
+            <div class="notice">
+                <h4>NOTICE</h4>
+                <ul>
+                    <li>폭설로 인한 배송지연 안내</li>
+                    <li>폭설로 인한 배송지연 안내</li>
+                    <li>폭설로 인한 배송지연 안내</li>
+                </ul>
+            </div>
+
+            <div class="event">
+                <h4>THE WEEK'S EVENT</h4>
+                <p>이벤트 상품을 확인하세요!</p>
+                <img src="https://via.placeholder.com/250x150?text=Event+Map" alt="이벤트 지도">
+            </div>
+        </aside>
+    </div>
+</body>
+
+</html>
