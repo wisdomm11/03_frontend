@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/index1.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+    <style>
+        /* header {
+            border: 1px solid red;
+        }
+
+        main {
+            border: 1px solid red;
+        }
+
+        footer {
+            border: 1px solid red;
+        } */
+
+
+        /* ============================================================== */
+
+
+
+        #wrap {
+            width: 85%;
+
+            margin: 0 auto;
+
+
+
+
+            /* margin: 0 auto; */
+        }
+
+        #header_top {
+            display: flex;
+
+            justify-content: space-evenly;
+            align-items: center;
+
+            background-color: #F2F0F0;
+
+            height: 10vh;
+        }
+
+        #ht_2 nav {
+            background-color: #F2F0F0 !important;
+            /* Bootstrap의 기본색을 덮어씌우려면 !important 사용 */
+        }
+
+        .ht_2_input {
+            width: 300px;
+        }
+
+        #ht_3 {
+            display: flex;
+            align-items: center;
+        }
+
+        #ht_3_ul {
+            display: flex;
+            list-style-type: none;
+
+            margin-top: 15px;
+        }
+
+        #ht_3_ul li {
+            margin: 10px;
+            color: gray;
+        }
+
+        .ht_3_ul_li {
+            color: #AACA65 !important;
+        }
+
+        #ht_3_ul a {
+            text-decoration: none;
+        }
+
+
+
+
+
+        #header_bottom {
+            height: 8vh;
+            background-color: #4E4C4D;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+
+            padding-top: 15px;
+
+        }
+
+        #h_b_n {
+            width: 100%;
+        }
+
+
+
+        #h_b_ul {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+
+            list-style: none;
+        }
+
+        #h_b_ul a {
+            text-decoration: none;
+            color: white
+        }
+
+        main {
+            width: 100%;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            margin: 0 auto;
+        }
+
+        #main1 {
+            display: flex;
+
+
+
+
+            width: 100%;
+
+
+        }
+
+        #main1_1 {
+            flex: 1;
+            margin: 15px;
+            /* 1 비율 */
+
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        #main1_1 ul {
+            list-style: none;
+            padding-left: 0;
+
+        }
+
+        #main1_1 li {
+            border-bottom: 1px solid #ccc;
+            padding: 3px;
+        }
+
+        #main1_1_1 {
+            background-color: #96C11F;
+            color: white;
+            text-align: center;
+        }
+
+        #main1_1_2 {
+
+
+            width: 80%;
+            /* 또는 원하는 고정 너비 */
+            margin: 0 auto;
+
+        }
+
+
+
+        #main1_2 {
+            flex: 2;
+            margin: 15px;
+            /* 이미지 영역은 더 넓게 */
+
+            display: flex;
+
+        }
+
+        #main1_2 img {
+            width: 100%;
+            /* 부모 영역 전체 너비 */
+            height: auto;
+            /* 비율 유지하며 확대 */
+        }
+
+        #main1_3 {
+            flex: 1;
+            margin: 15px;
+            /* 동일한 비율로 배치 */
+        }
+
+        #main2 {
+            display: flex;
+        }
+
+        #main2_1 {
+            flex: 4;
+
+            border: 1px solid gray;
+            margin: 10px;
+            padding: 15px;
+
+            box-shadow: inset 3px 0 10px rgba(0, 0, 0, 0.2);
+
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        #main2_2 {
+            flex: 3;
+
+            display: flex;
+            flex-direction: column;
+        }
+
+        .main2_2size {
+            flex: 1;
+        }
+
+        #main2_2_1 {
+            border: 1px solid gray;
+            margin: 10px;
+            padding: 10px;
+
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+
+            box-shadow: inset 5px 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        #main2_2_1 img,
+        #main2_2_2 img,
+        #main2_2_3 img {
+            margin: 3px;
+        }
+
+
+
+        #main2_2_2 {
+            border: 1px solid gray;
+            margin: 10px;
+            padding: 10px;
+
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+
+            box-shadow: inset 5px 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        #main2_2_3 {
+            border: 1px solid gray;
+            margin: 10px;
+            padding: 10px;
+
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+
+            box-shadow: inset 5px 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        #main2_img {
+            display: flex;
+
+
+
+
+        }
+
+        #main2_img article {
+            border: 1px solid gray;
+            padding: 10px;
+        }
+
+        .section-title {
+            border-left: 4px solid #96C11F;
+            /* 연두색 선 */
+            padding-left: 10px;
+            /* 선과 텍스트 간격 */
+            font-weight: bold;
+            color: #333;
+        }
+
+        #main2_img_1,
+        #main2_img_2 {
+            margin: 5px;
+            width: 100%;
+        }
+
+        #main2_img_1 img,
+        #main2_img_2 img {
+            margin: 5px;
+            padding-right: 10px;
+            width: 100%;
+        }
+
+
+
+        #main3_1 {
+            padding: 10px;
+            padding-left: 3rem;
+        }
+
+        #main3_2 {
+            margin-top: 0px;
+        }
+
+        #main3_1 span {
+            color: #86AD37;
+        }
+
+        #main3_1 #main3_2 {
+            margin: 0 auto;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            /* 4열 */
+            grid-template-rows: repeat(2, auto);
+            /* 2행 */
+
+            gap: 20px;
+            /* 요소 간 여백 */
+
+            margin-top: 20px;
+
+
+            align-items: center;
+            /* 세로 중앙 */
+        }
+
+        .grid-item {
+
+
+            margin: 0 auto;
+            text-align: center;
+            padding: 10px;
+
+        }
+
+        #grid-item1 {
+            color: #86AD37;
+        }
+
+        #grid-item2 {
+            font-weight: bolder;
+        }
+
+        #footer1 {
+            height: 8vh;
+            background-color: #4E4C4D;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+
+            padding-top: 15px;
+
+        }
+
+        #f_1_n {
+            width: 100%;
+        }
+
+        #f_1_ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            list-style: none;
+        }
+
+        #f_1_ul a {
+            text-decoration: none;
+            color: white;
+
+            margin: 20px;
+        }
+
+        #footer2 {
+            background-color: #F2F0F0;
+            display: flex;
+
+            justify-content: space-evenly;
+            align-items: center;
+
+            padding: 20px;
+        }
+
+        .colored-hr {
+            border: none;
+            height: 5px;
+            /* 두께 설정 */
+            background-color: #3f5308;
+            /* 원하는 색상으로 변경 */
+            margin: 20px 0;
+            /* 위아래 여백 */
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="wrap">
+
+        <header>
+            <div id="header_top">
+                <div id="ht_1">
+                    <a href="./1_index_살붙이기2.html">
+                        <img src="./img/logo.gif" alt="">
+                    </a>
+
+                </div>
+                <div id="ht_2">
+                    <nav class="navbar bg-light">
+                        <div class="container-fluid">
+                            <form class="d-flex" role="search">
+                                <input class="form-control me-2 ht_2_input" type="search" placeholder="Search"
+                                    aria-label="Search">
+                                <button class="btn btn-outline-success" type="submit">Search</button>
+                            </form>
+                        </div>
+                    </nav>
+                </div>
+                <div id="ht_3">
+                    <ul id="ht_3_ul">
+                        <a href="">
+                            <li class="ht_3_ul_li">로그인</li>
+                        </a>
+                        <a href="">
+                            <li class="ht_3_ul_li">회원가입</li>
+                        </a>
+                        <a href="">
+                            <li>마이페이지</li>
+                        </a>
+                        <a href="">
+                            <li>이용안내</li>
+                        </a>
+                        <a href="">
+                            <li>고객센터</li>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+            <div id="header_bottom">
+                <nav id="h_b_n">
+                    <ul id="h_b_ul">
+                        <li><a href="./2_detail.html">상세 페이지</a></li>
+                        <li><a href="./3_cert.html">장바구니</a></li>
+                        <li><a href="#">고객 갤러리</a></li>
+                        <li><a href="#">주문배송</a></li>
+                        <li><a href="#">자주 하는 질문</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <section id="main1">
+                <aside id="main1_1">
+                    <div id="main1_1_1">
+                        CATEGORY ITEM
+                    </div>
+
+                    <ul id="main1_1_2">
+                        <li>생활 아트</li>
+                        <li>캔버스 아트</li>
+                        <li>사진 벽지</li>
+                        <li>장문형/현관문형</li>
+                        <li>포인트 벽지</li>
+                        <li>세계지도</li>
+                        <li>앤틱 세계지도 벽지</li>
+                        <li>입체 세계지도 벽지</li>
+                        <li>어린이방 세계지도</li>
+                        <li>즉착형 롤스크린</li>
+                        <li>맞춤제작 결제창</li>
+                    </ul>
+                </aside>
+                <div id="main1_2">
+                    <img src="./img/main_img.gif" alt="">
+                </div>
+                <div id="main1_3">
+                    <article id="main1_3_notice">
+                        <h4>NOTICE</h4>
+                        <hr>
+                        <ul>
+                            <li>폭설로 인한 배송지연 안내</li>
+                            <li>폭설로 인한 배송지연 안내</li>
+                            <li>폭설로 인한 배송지연 안내</li>
+                            <li>폭설로 인한 배송지연 안내</li>
+                            <li>폭설로 인한 배송지연 안내</li>
+                            <li>폭설로 인한 배송지연 안내</li>
+                        </ul>
+                    </article>
+                    <article id="main1_3_event">
+                        <h4>THE WEEK'S EVENT</h4>
+                        <hr>
+                        <p>이번 주의 이벤트 상품을 확인하세요!</p>
+                        <img src="./img/week_event_img.gif" alt="">
+                    </article>
+                </div>
+            </section>
+
+
+
+            <section id="main2">
+                <div id="main2_1">
+                    <h4>SPECIAL SHOP</h4>
+                    <hr>
+                    <div id="main2_img">
+                        <article id="main2_img_1"><img src="./img/special_img1.gif" alt=""></article>
+                        <article id="main2_img_2"><img src="./img/special_img2.gif" alt=""></article>
+                    </div>
+                </div>
+                <div id="main2_2">
+                    <article id="main2_2_1">
+                        <div class="main2_2size" id="main2_2_1_1">
+                            <div class="section-title">LANDSCAPE</div>
+                            <hr>
+                            한 폭의 아름다움
+                            <br>
+                            풍경 사진 벽지
+                        </div>
+
+                        <img class="main2_2size" src="./img/landscape_img1.gif" alt="">
+                        <img class="main2_2size" src="./img/landscape_img2.gif" alt="">
+                    </article>
+                    <article id="main2_2_2">
+                        <div class="main2_2size" id="main2_2_2_1">
+                            <div class="section-title">POINT WALLPAPER</div>
+                            <hr>
+                            밋밋한 곳에 포인트를
+                            <br>
+                            포인트 벽지
+                        </div>
+
+                        <a href="./2_detail.html">
+                            <img class="main2_2size" src="./img/new_04.jpg" alt="">
+                        </a>
+
+
+                        <img class="main2_2size" src="./img/new_03.jpg" alt="">
+
+                    </article>
+                    <article id="main2_2_3">
+                        <div class="main2_2size" id="main2_2_3_1">
+                            <div class="section-title">CHILDREN</div>
+                            <hr>
+                            동심 속으로!
+                            <br>
+                            어린이방 벽지
+                        </div>
+                        <img class="main2_2size" src="./img/children_img1.gif" alt="">
+                        <img class="main2_2size" src="./img/children_img2.gif" alt="">
+
+                    </article>
+                </div>
+            </section>
+
+            <hr class="colored-hr">
+
+            <section id="main3">
+                <div id="main3_1">
+                    <h4>
+                        <span>NEW ARRIVAL</span> 신규 상품
+
+                    </h4>
+                </div>
+                <div id="main3_2" class="grid-container">
+                    <div class="grid-item">
+                        <div>
+                            <img src="./img/new_01.jpg" alt="">
+                        </div>
+                        <div>
+                            <span id="grid-item1">맞춤제작(풍경)</span> <br>
+                            원하는 사이즈로 제작 가능 <br>
+                            <span id="grid-item2">20,000원</span>
+                        </div>
+                    </div>
+                    <div class="grid-item">
+                        <div>
+                            <img src="./img/new_02.jpg" alt="">
+                        </div>
+                        <div>
+                            <span id="grid-item1">맞춤제작(풍경)</span> <br>
+                            원하는 사이즈로 제작 가능 <br>
+                            <span id="grid-item2">20,000원</span>
+                        </div>
+                    </div>
+                    <div class="grid-item">
+                        <div>
+                            <img src="./img/new_03.jpg" alt="">
+                        </div>
+                        <div>
+                            <span id="grid-item1">맞춤제작(풍경)</span> <br>
+                            원하는 사이즈로 제작 가능 <br>
+                            <span id="grid-item2">20,000원</span>
+                        </div>
+                    </div>
+                    <div class="grid-item">
+                        <div>
+                            <img src="./img/new_04.jpg" alt="">
+                        </div>
+                        <div>
+                            <span id="grid-item1">맞춤제작(풍경)</span> <br>
+                            원하는 사이즈로 제작 가능 <br>
+                            <span id="grid-item2">20,000원</span>
+                        </div>
+                    </div>
+                    <div class="grid-item">
+                        <div>
+                            <img src="./img/new_05.jpg" alt="">
+                        </div>
+                        <div>
+                            <span id="grid-item1">맞춤제작(풍경)</span> <br>
+                            원하는 사이즈로 제작 가능 <br>
+                            <span id="grid-item2">20,000원</span>
+                        </div>
+                    </div>
+                    <div class="grid-item">
+                        <div>
+                            <img src="./img/new_06.jpg" alt="">
+                        </div>
+                        <div>
+                            <span id="grid-item1">맞춤제작(풍경)</span> <br>
+                            원하는 사이즈로 제작 가능 <br>
+                            <span id="grid-item2">20,000원</span>
+                        </div>
+                    </div>
+                    <div class="grid-item">
+                        <div>
+                            <img src="./img/new_07.jpg" alt="">
+                        </div>
+                        <div>
+                            <span id="grid-item1">맞춤제작(풍경)</span> <br>
+                            원하는 사이즈로 제작 가능 <br>
+                            <span id="grid-item2">20,000원</span>
+                        </div>
+                    </div>
+                    <div class="grid-item">
+                        <div>
+                            <img src="./img/new_08.jpg" alt="">
+                        </div>
+                        <div id="grid-item-2">
+                            <span id="grid-item1">맞춤제작(풍경)</span> <br>
+                            원하는 사이즈로 제작 가능 <br>
+                            <span id="grid-item2">20,000원</span>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div id="footer1">
+                <nav id="f_1_n">
+                    <ul id="f_1_ul">
+                        <li><a href="#">회사소개</a></li>
+                        <li><a href="#">이용안내</a></li>
+                        <li><a href="#">장바구니</a></li>
+                        <li><a href="#">주문조회</a></li>
+                        <li><a href="#">적립금</a></li>
+                        <li><a href="#">이용약관</a></li>
+                        <li><a href="#">개인정보보호정책</a></li>
+                        <li><a href="#">고객센터</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div id="footer2">
+                <div><img src="./img/logo.gif" alt=""></div>
+                <div>
+                    상호:다연아트 대표:이승주 개인정보관리책임자:이승주(sjdayoun@naver.com) <br>
+                    주소:경기도 고양시 덕양구 고양동 160번지 전화:031-967-6219 <br>
+                    사업자등록번호 [104-03-41624] 통신판매업 신고 (제 경기고양-234호) <br>
+                    Capyright@2008 dayun.com All rights reserved
+                </div>
+                <div>
+                    <img src="./img/footer_banner_01.gif" alt="">
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
