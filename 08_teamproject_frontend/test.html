@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>라면왕국 - 프리미엄 라면 쇼핑몰</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* 헤더 */
+        .header {
+            background: linear-gradient(135deg, #ff6b35, #ff8e53);
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+
+        .nav-links a:hover {
+            opacity: 0.8;
+        }
+
+        /* 메인 배너 */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+                url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23ff6b35" width="1200" height="600"/><circle fill="%23ff8e53" cx="200" cy="150" r="100" opacity="0.7"/><circle fill="%23ff4500" cx="800" cy="300" r="150" opacity="0.5"/><circle fill="%23ffa500" cx="1000" cy="100" r="80" opacity="0.6"/></svg>');
+            background-size: cover;
+            background-position: center;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            padding: 0 2rem;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+            animation: bounceIn 1.2s ease-out;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .cta-button {
+            background: linear-gradient(45deg, #ff4500, #ff6b35);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+            box-shadow: 0 5px 15px rgba(255, 107, 53, 0.4);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(255, 107, 53, 0.6);
+        }
+
+        /* 섹션 공통 스타일 */
+        .section {
+            padding: 5rem 0;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #333;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(45deg, #ff6b35, #ff4500);
+            margin: 1rem auto;
+            border-radius: 2px;
+        }
+
+        /* 맛 선택 섹션 */
+        .taste-selection {
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+        }
+
+        .taste-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .taste-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .taste-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .taste-card.mild {
+            border-top: 5px solid #4CAF50;
+        }
+
+        .taste-card.spicy {
+            border-top: 5px solid #f44336;
+        }
+
+        .taste-image {
+            height: 200px;
+            background: linear-gradient(45deg, #ff6b35, #ffa500);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: white;
+        }
+
+        .taste-card.mild .taste-image {
+            background: linear-gradient(45deg, #4CAF50, #81C784);
+        }
+
+        .taste-content {
+            padding: 2rem;
+        }
+
+        .taste-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .taste-content p {
+            color: #666;
+            margin-bottom: 1.5rem;
+        }
+
+        .product-list {
+            list-style: none;
+        }
+
+        .product-list li {
+            background: #f8f9fa;
+            padding: 0.5rem 1rem;
+            margin: 0.5rem 0;
+            border-radius: 10px;
+            border-left: 3px solid #ff6b35;
+        }
+
+        /* 조리도구 섹션 */
+        .cooking-tools {
+            background: white;
+        }
+
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .tool-card {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+
+        .tool-card:hover {
+            transform: translateY(-5px);
+            border-color: #ff6b35;
+            box-shadow: 0 10px 30px rgba(255, 107, 53, 0.2);
+        }
+
+        .tool-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #ff6b35;
+        }
+
+        .tool-card h4 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .tool-card p {
+            color: #666;
+            margin-bottom: 1.5rem;
+        }
+
+        .price {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #ff4500;
+            margin-bottom: 1rem;
+        }
+
+        .add-to-cart {
+            background: linear-gradient(45deg, #ff6b35, #ff4500);
+            color: white;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: bold;
+        }
+
+        .add-to-cart:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(255, 107, 53, 0.4);
+        }
+
+        /* 푸터 */
+        .footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 3rem 0;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* 애니메이션 */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes bounceIn {
+            0% {
+                opacity: 0;
+                transform: scale(0.3);
+            }
+
+            50% {
+                transform: scale(1.1);
+            }
+
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        /* 반응형 */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.2rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .nav {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .nav-links {
+                gap: 1rem;
+            }
+        }
+
+        /* 선택된 카드 스타일 */
+        .taste-card.selected {
+            border: 3px solid #ff6b35;
+            box-shadow: 0 0 20px rgba(255, 107, 53, 0.3);
+        }
+
+        .tool-card.selected {
+            border-color: #ff6b35;
+            background: #fff8f5;
+        }
+
+        /* 장바구니 */
+        .cart-summary {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #ff6b35;
+            color: white;
+            padding: 1rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            min-width: 200px;
+        }
+
+        .cart-count {
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 헤더 -->
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">🍜 라면왕국</div>
+            <div class="nav-links">
+                <a href="#home">홈</a>
+                <a href="#taste">맛 선택</a>
+                <a href="#tools">조리도구</a>
+                <a href="#contact">문의</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- 메인 배너 -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>🍜 라면왕국</h1>
+            <p>세상 모든 라면과 조리도구를 한 곳에서!</p>
+            <a href="#taste" class="cta-button">지금 쇼핑하기</a>
+        </div>
+    </section>
+
+    <!-- 맛 선택 섹션 -->
+    <section class="section taste-selection" id="taste">
+        <h2 class="section-title">맛으로 선택하기</h2>
+        <div class="taste-grid">
+            <div class="taste-card mild" onclick="selectTaste('mild')">
+                <div class="taste-image">🌱</div>
+                <div class="taste-content">
+                    <h3>순한맛 라면</h3>
+                    <p>부드럽고 깔끔한 맛으로 누구나 즐길 수 있는 라면들</p>
+                    <ul class="product-list">
+                        <li>🍜 진라면 순한맛 - 1,200원</li>
+                        <li>🍜 너구리 순한맛 - 1,300원</li>
+                        <li>🍜 안성탕면 - 1,100원</li>
+                        <li>🍜 오징어집 - 1,400원</li>
+                        <li>🍜 멸치칼국수 - 1,000원</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="taste-card spicy" onclick="selectTaste('spicy')">
+                <div class="taste-image">🌶️</div>
+                <div class="taste-content">
+                    <h3>매운맛 라면</h3>
+                    <p>화끈하고 자극적인 맛으로 스트레스를 날려버리는 라면들</p>
+                    <ul class="product-list">
+                        <li>🍜 신라면 - 1,200원</li>
+                        <li>🍜 불닭볶음면 - 1,500원</li>
+                        <li>🍜 진라면 매운맛 - 1,200원</li>
+                        <li>🍜 틈새라면 - 1,300원</li>
+                        <li>🍜 짜파게티 - 1,400원</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 조리도구 섹션 -->
+    <section class="section cooking-tools" id="tools">
+        <h2 class="section-title">라면 조리도구</h2>
+        <div class="tools-grid">
+            <div class="tool-card" onclick="addToCart('라면냄비', 25000)">
+                <div class="tool-icon">🥘</div>
+                <h4>프리미엄 라면냄비</h4>
+                <p>완벽한 라면을 위한 전용 냄비. 열전도가 뛰어나고 달라붙지 않는 코팅</p>
+                <div class="price">25,000원</div>
+                <button class="add-to-cart">장바구니 담기</button>
+            </div>
+
+            <div class="tool-card" onclick="addToCart('라면젓가락', 8000)">
+                <div class="tool-icon">🥢</div>
+                <h4>라면 전용 젓가락</h4>
+                <p>라면을 먹기에 최적화된 길이와 재질의 젓가락 세트</p>
+                <div class="price">8,000원</div>
+                <button class="add-to-cart">장바구니 담기</button>
+            </div>
+
+            <div class="tool-card" onclick="addToCart('라면그릇', 15000)">
+                <div class="tool-icon">🥣</div>
+                <h4>라면 전용 그릇</h4>
+                <p>보온성이 뛰어난 도자기 라면 그릇. 깊이와 크기가 완벽함</p>
+                <div class="price">15,000원</div>
+                <button class="add-to-cart">장바구니 담기</button>
+            </div>
+
+            <div class="tool-card" onclick="addToCart('계량컵', 5000)">
+                <div class="tool-icon">🥤</div>
+                <h4>라면 계량컵</h4>
+                <p>정확한 물의 양을 측정할 수 있는 전용 계량컵</p>
+                <div class="price">5,000원</div>
+                <button class="add-to-cart">장바구니 담기</button>
+            </div>
+
+            <div class="tool-card" onclick="addToCart('라면포크', 12000)">
+                <div class="tool-icon">🍴</div>
+                <h4>라면 멀티 포크</h4>
+                <p>면을 감기 좋고 건더기를 집기 편한 다기능 포크</p>
+                <div class="price">12,000원</div>
+                <button class="add-to-cart">장바구니 담기</button>
+            </div>
+
+            <div class="tool-card" onclick="addToCart('전기포트', 45000)">
+                <div class="tool-icon">⚡</div>
+                <h4>라면 전용 전기포트</h4>
+                <p>빠른 끓임과 온도 조절이 가능한 고급 전기포트</p>
+                <div class="price">45,000원</div>
+                <button class="add-to-cart">장바구니 담기</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 푸터 -->
+    <footer class="footer">
+        <div class="footer-content">
+            <h3>🍜 라면왕국</h3>
+            <p>대한민국 최고의 라면 쇼핑몰</p>
+            <p>© 2025 라면왕국. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- 장바구니 요약 -->
+    <div class="cart-summary" id="cartSummary" style="display: none;">
+        <div class="cart-count">장바구니: <span id="itemCount">0</span>개</div>
+        <div>총액: <span id="totalPrice">0</span>원</div>
+    </div>
+
+    <script>
+        let cart = [];
+        let selectedTaste = null;
+
+        function selectTaste(taste) {
+            // 이전 선택 제거
+            document.querySelectorAll('.taste-card').forEach(card => {
+                card.classList.remove('selected');
+            });
+
+            // 새로운 선택 추가
+            const selectedCard = document.querySelector(`.taste-card.${taste}`);
+            selectedCard.classList.add('selected');
+            selectedTaste = taste;
+
+            // 선택 피드백
+            const tasteText = taste === 'mild' ? '순한맛' : '매운맛';
+            alert(`${tasteText} 라면을 선택하셨습니다! 🍜`);
+        }
+
+        function addToCart(itemName, price) {
+            cart.push({
+                name: itemName,
+                price: price
+            });
+
+            updateCartSummary();
+
+            // 시각적 피드백
+            const card = event.currentTarget;
+            card.classList.add('selected');
+
+            setTimeout(() => {
+                alert(`${itemName}이(가) 장바구니에 추가되었습니다! 🛒`);
+            }, 100);
+        }
+
+        function updateCartSummary() {
+            const cartSummary = document.getElementById('cartSummary');
+            const itemCount = document.getElementById('itemCount');
+            const totalPrice = document.getElementById('totalPrice');
+
+            if (cart.length > 0) {
+                cartSummary.style.display = 'block';
+                itemCount.textContent = cart.length;
+
+                const total = cart.reduce((sum, item) => sum + item.price, 0);
+                totalPrice.textContent = total.toLocaleString();
+            } else {
+                cartSummary.style.display = 'none';
+            }
+        }
+
+        // 부드러운 스크롤
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // 스크롤 애니메이션
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // 관찰할 요소들 설정
+        document.querySelectorAll('.taste-card, .tool-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'all 0.6s ease-out';
+            observer.observe(el);
+        });
+    </script>
+</body>
+
+</html>
