@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .row {
+            width: 420px;
+            margin: 0 auto;
+        }
+
+        .row li {
+            display: inline;
+        }
+
+        .row ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        #lightbox {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+
+
+            display: none;
+            background-color: rgb(0, 0, 0, 0.7)
+        }
+
+        #lightbox img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+
+            /* 기준점을 중앙으로 하는것 */
+            transform: translate(-50%, -50%);
+            border: 5px solid white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="row">
+        <ul>
+            <li><img src="./img/light_box/tree-1-thumb.jpg" data-src="./img/light_box/tree-1.jpg" class="pic"></li>
+            <li><img src="./img/light_box/tree-2-thumb.jpg" data-src="./img/light_box/tree-2.jpg" class="pic"></li>
+            <li><img src="./img/light_box/tree-3-thumb.jpg" data-src="./img/light_box/tree-3.jpg" class="pic"></li>
+            <li><img src="./img/light_box/tree-4-thumb.jpg" data-src="./img/light_box/tree-4.jpg" class="pic"></li>
+            <li><img src="./img/light_box/tree-5-thumb.jpg" data-src="./img/light_box/tree-5.jpg" class="pic"></li>
+            <li><img src="./img/light_box/tree-6-thumb.jpg" data-src="./img/light_box/tree-6.jpg" class="pic"></li>
+        </ul>
+    </div>
+
+    <div id="lightbox">
+        <img src="./img/light_box/tree-1.jpg" alt="" id="lightboxImage">
+    </div>
+
+
+    <script>
+        let pics = document.getElementsByClassName('pic');
+        let lightbox = document.getElementById('lightbox');
+        let lightboxImage = document.getElementById('lightboxImage');
+
+        // 클릭 이벤트가 일어나는것 // 함수 호출하는것
+        for (let i = 0; i < pics.length; i++) {
+            pics[i].addEventListener('click', showLightbox);
+
+            pics[i].addEventListener('click', function () {
+                console.log(`클릭한 pic[${i}]`);
+                showLightbox.call(this); // 클릭한 이미지 기준으로 showLightbox 호출
+            });
+
+        }
+
+        function showLightbox() {
+            
+
+            let bigLocation = this.getAttribute("data-src");
+            console.log(`bigLocation 변수에 들어간 값: ${bigLocation}`);
+            lightboxImage.setAttribute("src", bigLocation)
+            lightbox.style.display = 'block';
+        }
+
+        // lightbox.addEventListener("click", function () {
+        //     lightbox.style.display = 'none';
+        // });
+
+        lightbox.onclick = function () {
+            lightbox.style.display = 'none';
+        }
+
+
+    </script>
+
+
+</body>
+
+</html>
