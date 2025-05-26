@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="./css/index_main_sidebar.css">
+
+    <style>
+        .wrap {
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        .header_top {
+            
+
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+
+            background-color: #F8F9FA;
+        }
+
+        .h_t_1 img {
+            width: 150px;
+        }
+
+        .h_t_3 ul {
+            display: flex;
+            list-style: none;
+            gap: 40px;
+        }
+
+        .h_t_3 i {
+            font-size: 2rem;
+            /* 원하는 크기로 변경 (예: 2rem, 32px 등) */
+        }
+
+        #header_bottom_nav {
+            display: flex;
+            justify-content: space-evenly;
+            width: 80%;
+        }
+
+        .main_1 img {
+            width: 700px;
+        }
+
+        main {
+            display: flex;
+        }
+
+        .sidebar {
+            flex: 2;
+        }
+
+        .main_right {
+            flex: 6;
+        }
+
+        
+
+        .m_r_1 img {
+            width: 900px;
+
+            
+
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <header>
+            <div class="header_top">
+                <div class="h_t_1">
+                    <!-- 로고 -->
+                    <img src="./img/main_logo.png" alt="">
+                </div>
+                <div class="h_t_2">
+                    <!-- 검색창 -->
+                    <nav class="navbar bg-body-tertiary">
+                        <div class="container-fluid">
+                            <form class="d-flex" role="search">
+                                <input class="form-control me-2 form-control-lg" type="search" placeholder="Search"
+                                    aria-label="Search" />
+                                <button class="btn btn-outline-success btn-lg" type="submit">Search</button>
+                            </form>
+                        </div>
+                    </nav>
+                </div>
+                <div class="h_t_3">
+                    <ul>
+                        <li>
+                            <i class="bi bi-alarm"></i>
+                            <div>최근</div>
+                        </li>
+                        <li>
+                            <i class="bi bi-heart"></i>
+                            <div>관심</div>
+                        </li>
+                        <li>
+                            <i class="bi bi-person"></i>
+                            <div>로그인</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="header_bottom">
+                <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                    <div class="container-fluid">
+
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                            <div class="navbar-nav" id="header_bottom_nav">
+                                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                                <a class="nav-link" href="#">자동차</a>
+                                <a class="nav-link" href="#">조립PC</a>
+                                <a class="nav-link" href="#">PC견적</a>
+                                <a class="nav-link" href="#">PC구매상담</a>
+                                <a class="nav-link" href="#">쇼핑기획전</a>
+                                <a class="nav-link" href="#">커뮤니티</a>
+
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <div class="sidebar">
+                <div class="sidebar-header">
+                    <span class="sidebar-menu-icon">&#9776;</span>
+                    <span class="sidebar-title">전체 카테고리</span>
+                </div>
+                <ul class="sidebar-list">
+                    <li><span class="icon">🧠</span> AI</li>
+                    <li><span class="icon">📺</span> 가전 · TV</li>
+                    <li><span class="icon">💻</span> 컴퓨터 · 노트북 · 조립PC</li>
+                    <li><span class="icon">📱</span> 태블릿 · 모바일 · 디카</li>
+                    <li><span class="icon">⚽</span> 스포츠 · 골프</li>
+                    <li><span class="icon">🚗</span> 자동차 · 용품 · 공구</li>
+                    <li><span class="icon">🛋️</span> 가구 · 조명</li>
+                    <li><span class="icon">🍼</span> 식품 · 유아 · 완구</li>
+                    <li><span class="icon">🍳</span> 생활 · 주방 · 건강</li>
+                    <li><span class="icon">👗</span> 패션 · 잡화 · 뷰티</li>
+                    <li><span class="icon">🐶</span> 반려동물 · 취미 · 사무</li>
+                    <li><span class="icon">🚀</span> 로켓배송관</li>
+                </ul>
+            </div>
+
+            <div class="main_side">
+
+            </div>
+            <div class="main_right">
+                <div class="m_r_1">
+                    <img src="img/main_banner.jpg" alt="">
+                </div>
+
+            </div>
+
+        </main>
+        <header></header>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
