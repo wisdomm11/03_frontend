@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"></script> -->
+    <script src="./js/jquery-3.7.1.slim.min.js"></script>
+    <script>
+        // jquery
+        $(document).ready(function () {
+            // 제이쿼리 코드 블락
+            $('.add').click(
+                function () {
+                    $('h1, h2, p').addClass('blue');
+                    $('p').addClass('important')
+                }
+            )
+
+            $('.remove').click(
+                function () {
+                    $('h1, h2, p').removeClass('blue');
+                    $('p').removeClass('important')
+                }
+            )
+        }
+        )
+
+
+
+
+
+    </script>
+    <style>
+        .wrap {
+            width: 500px;
+            margin: 0 auto;
+            border: 1px solid red;
+            text-align: center;
+        }
+
+        .important {
+            font-weight: bold;
+            font-size: xx-large;
+        }
+
+        .blue {
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <h1> html5 </h1>
+        <h2> css </h2>
+        <div> JavaScript </div>
+        <p> jquery </p>
+        <button class="add">CSS 적용</button>
+        <button class="remove">CSS 제거</button>
+    </div>
+
+
+
+</body>
+
+</html>
